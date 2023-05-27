@@ -1,2 +1,20 @@
-<app-scroll-page></app-scroll-page>
+<nav class="navbar">
+
+  <a id="logo" href="/" id="logo">FQ</a>
+
+  <ul class="nav-list">
+
+    <li class="nav-item" routerLinkActive="active"><a class="nav-link"  [routerLink]="['/']">Главная</a></li>
+    <li class="nav-item" routerLinkActive="active"><a class="nav-link" [routerLink]="['/code']">Найти код</a></li>
+    <li class="nav-item" routerLinkActive="active"><a class="nav-link" [routerLink]="['/about']">О проекте</a></li>
+    <li class="nav-item" routerLinkActive="active"><a class="nav-link" [routerLink]="['/drawing']">Рисовалка</a></li>
+
+  </ul>
+</nav>
+
+
+  <div id="page" class="routeContainer" [@routeAnimation]="getDept(myOutlet)">
+    <router-outlet #myOutlet="outlet"></router-outlet>
+
+  </div>
 

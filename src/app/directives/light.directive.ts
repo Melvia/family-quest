@@ -7,14 +7,14 @@ export class LightDirective {
   constructor(protected el: ElementRef) {
   }
 
-  @HostBinding('style.backgroundImage') elStyle = null;
+  @HostBinding('style.backgroundImage') elStyle : string | null = null;
 
   @HostListener("mousemove", ['$event']) onMouseMove(event: MouseEvent) {
     this.setStyle(event);
   }
 
-  private setStyle(e) {
-    let spotlightSize = "transparent 10px, rgba(0, 0, 0, 0.95) 120px)";
+  private setStyle(e: MouseEvent) {
+    let spotlightSize = "transparent 10px, rgba(0, 0, 0, 0.95) 220px)";
 
     this.elStyle = `radial-gradient(circle at ${
       (e.pageX / this.el.nativeElement.clientWidth) * 100

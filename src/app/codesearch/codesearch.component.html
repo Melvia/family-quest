@@ -1,0 +1,9 @@
+<app-code></app-code>
+
+<div class="container">
+  <input class="input" type="text" [(ngModel)]="inputCode" >
+  <button href="#" class="button" (click)="toMirrorPage()">Переход</button>
+  <span *ngIf="showError" class="error">Слово не подходит. Попробуй еще раз</span>
+</div>
+
+

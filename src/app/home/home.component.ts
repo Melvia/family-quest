@@ -4,11 +4,11 @@ import Draggable from "gsap/Draggable";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 @Component({
-  selector: 'app-scroll-page',
-  templateUrl: './scroll-page.component.html',
-  styleUrls: ['./scroll-page.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
 })
-export class ScrollPageComponent implements OnInit, OnDestroy {
+export class HomeComponent implements OnInit, OnDestroy {
 
   constructor() { }
 

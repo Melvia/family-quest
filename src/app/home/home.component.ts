@@ -1,24 +1,19 @@
-import {Directive, ElementRef, ViewChild, ViewContainerRef} from '@angular/core';
-import {gsap} from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import { gsap } from "gsap";
 import Draggable from "gsap/Draggable";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
-@Directive({
-  selector: '[appScrollPage]'
+@Component({
+  selector: 'app-scroll-page',
+  templateUrl: './scroll-page.component.html',
+  styleUrls: ['./scroll-page.component.css']
 })
-export class ScrollPageDirective {
-  constructor(protected vcr: ViewContainerRef, protected host?: ElementRef<HTMLElement>) {
+export class ScrollPageComponent implements OnInit, OnDestroy {
 
-  }
+  constructor() { }
 
-
-  ngOnInit() {
-
-  }
-
-  ngAfterViewInit() {
+  ngOnInit(): void {
     gsap.registerPlugin(ScrollTrigger, Draggable);
-
 
     this.initScrollTrigger();
   }
@@ -36,8 +31,9 @@ export class ScrollPageDirective {
     gsap.to("#text", {scrollTrigger: {scrub: 1}, y: 500})
   }
 
-  protected onDestroy() {
-    delete this.host;
+  ngOnDestroy() {
+
   }
+
 
 }

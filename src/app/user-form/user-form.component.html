@@ -1,0 +1,19 @@
+<p>user-form works!</p>
+<p>user-form works!</p>
+<p>user-form works!</p>
+
+
+<form [formGroup]="form">
+<!--  <app-custom-mask formControlName="counter"></app-custom-mask>-->
+
+<!--  <app-custom-masked-input #mdInputEl class="spacer" [formControl]="mdInput"></app-custom-masked-input>-->
+
+
+
+
+  <app-custom-masked-input
+    [title]="'Card Number'"
+    formControlName="card"
+    [mask]="cardMask"></app-custom-masked-input>
+</form>
+

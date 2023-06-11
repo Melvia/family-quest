@@ -9,7 +9,10 @@ import { CodeComponent } from './code/code.component';
 import { MirrorComponent } from './mirror/mirror.component';
 import {LightDirective} from "./directives/light.directive";
 import { CodesearchComponent } from './codesearch/codesearch.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { UserFormComponent } from './user-form/user-form.component';
+import { ExampleControlComponent } from './controls/example-control/example-control.component';
+import {CustomMaskedInputComponent} from "./controls/custom-masked-input/custom-masked-input.component";
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import {FormsModule} from "@angular/forms";
     CodeComponent,
     MirrorComponent,
     LightDirective,
-    CodesearchComponent
+    CodesearchComponent,
+    UserFormComponent,
+    ExampleControlComponent,
+    CustomMaskedInputComponent,
 
   ],
   imports: [
@@ -27,6 +33,7 @@ import {FormsModule} from "@angular/forms";
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
